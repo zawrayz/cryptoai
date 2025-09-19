@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoVision - Advanced Cryptocurrency Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <i class="fas fa-coins"></i>
+        <h1>Crypto Vision</h1>
+      </div>
+      
+      <div class="search-container">
+        <i class="fas fa-search"></i>
+        <input type="text" id="search-input" placeholder="Search cryptocurrencies...">
+      </div>
+      
+      <div class="controls">
+        <button class="refresh-btn" id="refresh-btn">
+          <i class="fas fa-sync-alt"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-value" id="total-marketcap">$1.23T</div>
+        <div class="stat-label">Total Market Cap</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="total-volume">$45.67B</div>
+        <div class="stat-label">24h Volume</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="btc-dominance">48.3%</div>
+        <div class="stat-label">BTC Dominance</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="active-cryptos">12,345</div>
+        <div class="stat-label">Active Cryptocurrencies</div>
+      </div>
+    </div>
+    
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="gainers">Top Gainers</button>
+      <button class="filter-btn" data-filter="losers">Top Losers</button>
+      <button class="filter-btn" data-filter="volume">High Volume</button>
+    </div>
+    
+    <div class="crypto-grid" id="crypto-list">
+      <!-- Crypto cards will be inserted here -->
+      <div class="loader">
+        <div class="loader-circle"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for details -->
+  <div id="crypto-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <img src="" alt="" class="modal-crypto-icon" id="modal-crypto-icon">
+          <div class="modal-title">
+            <h2 id="crypto-name">Bitcoin</h2>
+            <p id="crypto-symbol">BTC</p>
+          </div>
+        </div>
+        <span class="close" id="close">&times;</span>
+      </div>
+      
+      <div class="modal-body">
+        <div class="price-large" id="crypto-price">$40,123.45</div>
+        <div class="price-change-large" id="crypto-price-change">
+          <span class="price-change positive"><i class="fas fa-caret-up"></i> 2.34%</span>
+        </div>
+        
+        <div class="chart-container" id="price-chart">
+          <!-- Price chart will be inserted here -->
+          <p class="text-center">Chart loading...</p>
+        </div>
+        
+        <div class="details-grid">
+          <div class="detail-card">
+            <div class="detail-label">Market Cap</div>
+            <div class="detail-value" id="crypto-marketcap">$789.12B</div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Volume (24h)</div>
+            <div class="detail-value" id="crypto-volume">$23.45B</div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Circulating Supply</div>
+            <div class="detail-value" id="crypto-supply">18.7M BTC</div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Total Supply</div>
+            <div class="detail-value" id="crypto-total-supply">21M BTC</div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">All-Time High</div>
+            <div class="detail-value" id="crypto-ath">$68,789.63</div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Rank</div>
+            <div class="detail-value" id="crypto-rank">#1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrypAI</title>   <!-- 👈 This is the name -->
+</head>
+<body>
+    <h1>Welcome to My Crypto Dashboard</h1>
+</body>
+</html>
