@@ -1,4 +1,4 @@
-# Use Python base image
+# Use official Python runtime
 FROM python:3.9-slim
 
 # Set working directory
@@ -8,9 +8,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy app files
+# Copy project files
 COPY . .
 
-# Run the app with Gunicorn
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 app:app
+# Expose port
+EXPOSE 8080
 
+# Start Gunicorn server
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 app:app
